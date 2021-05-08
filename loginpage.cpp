@@ -42,7 +42,7 @@ void userlogin()
 		cout << "Invalid username or password, please try again";
 		cin.get();
 		cin.get();
-		main();
+		
 	}
 }
 
@@ -61,7 +61,7 @@ void userregister()
 	reg << regusername << ' ' << regpassword << endl;
 
 	cout << "Registration is successful \n"; 
-	main();
+	
 }
 
 void forgot()
@@ -139,7 +139,7 @@ void forgot()
 	}
 	case 3:
 	{
-		main();
+		forgot();
 		break;
 	}
 	default:
@@ -179,7 +179,7 @@ int main()
 			break;
 		default:
 			cout << "Invalid choice, please try again";
-			main();
+			forgot();
 	}
 	return 0;
 }
