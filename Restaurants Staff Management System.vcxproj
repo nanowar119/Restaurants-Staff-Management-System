@@ -139,16 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Employee.cpp" />
-    <ClCompile Include="Manager.cpp" />
-    <ClCompile Include="Owner.cpp" />
+    <ClCompile Include="login.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Console_fuctions.h" />
-    <ClInclude Include="Employee.h" />
-    <ClInclude Include="Manager.h" />
-    <ClInclude Include="Owner.h" />
+    <ClInclude Include="login.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
