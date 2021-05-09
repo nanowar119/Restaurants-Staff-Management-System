@@ -1,0 +1,64 @@
+void Display_Main_Menu()
+{
+
+	int Menu_Option;
+
+	cout << "Welcome to the management system." << endl << endl;
+
+	cout << "What can I help you with today?" << endl;
+	cout << "1. Clock In" << endl;
+	cout << "2. Clock Out" << endl;
+	cout << "3. Change Password" << endl;
+	cout << "4. Check Schedule" << endl << endl;
+
+
+	cout << "Please enter a numerical option: ";
+
+	cin >> Menu_Option;
+	cout << endl;
+	
+
+	if (Menu_Option <= 0 || Menu_Option >= 5)
+	{
+		do
+
+		{
+			cout << "1. Clock In" << endl;
+			cout << "2. Clock Out" << endl;
+			cout << "3. Change Password" << endl;
+			cout << "4. Check Schedule" << endl << endl;
+			cout << "Invalid entry. Please enter one of the numbers above to move forward." << endl;
+			cout << "Please enter a numerical option: ";
+			cin >> Menu_Option;
+			cout << endl << endl;
+		}
+
+		while (Menu_Option < 1 || Menu_Option > 4);
+	}
+
+	switch (Menu_Option)
+	{
+	case 1:
+
+		cout << "Sending to Clock In Screen" << endl;
+		break;
+
+	case 2:
+
+		cout << "Sending to Clock Out Screen" << endl;
+		break;
+
+
+	case 3:
+
+		cout << "Sending to change Password Screen" << endl;
+		break;
+
+	case 4:
+
+		cout << "Sending to Check Schedule Screen" << endl;
+		break;
+
+	}
+
+}
