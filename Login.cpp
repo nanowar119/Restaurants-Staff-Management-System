@@ -17,15 +17,15 @@ void userlogin()
 {
 	int exist = 0;
 	string user, pass, u, p;
-
-	cout << "Enter your username: ";
+	int level_access;
+	cout << "Enter your username ID: ";
 	cin >> user;
 	cout << "Enter your password: ";
 	cin >> pass;
 
 	ifstream input("ownerregister.txt");
 
-	while (input >> u >> p)
+	while (input >> u >> p >> level_access)
 	{
 		
 		if (u == user && p == pass)
@@ -53,12 +53,15 @@ void userregister()
 {
 
 	string regusername, regpassword;
-
+	int level_access;
 	cout << "Enter your username: ";
 	cin >> regusername;
 
-	cout << "Enter your password";
+	cout << "Enter your password: ";
 	cin >> regpassword;
+
+	cout << "level of access ( 0 for Admin, 1 for Staff) : ";
+	cin >> level_access;
 
 	ofstream reg("ownerregister.txt", ios::app);
 	reg << regusername << ' ' << regpassword << endl;
