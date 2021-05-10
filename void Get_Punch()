@@ -1,0 +1,14 @@
+void Get_Punch()
+{
+
+
+	string Punch_Time[1];
+	time_t now = time(0);
+
+	// convert now to string form
+	char* pt = ctime(&now);
+	Punch_Time[0] = pt;
+
+	cout << "The local date and time is: " << Punch_Time[0] << endl;
+
+}
