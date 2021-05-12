@@ -117,7 +117,7 @@ int main()
 	}
 	cout << " ---------------------------------------------------------------------" << endl;
 
-	cout << "id is" << id << " level is : " << levelacc;
+	
 	adminConsole(id, staf, clockinvec, schechuVec);
 	
 
@@ -131,7 +131,20 @@ int main()
 
 
 
+	ofstream output("staffinfo.txt", std::ofstream::trunc);
+	output << staf.size() << endl;
+	for (int i = 0; i < staf.size(); i++)
+	{
+		output << staf[i].id << ' ';
+		output << staf[i].fname << ' ';
+		output << staf[i].lname << ' ';
+		output << staf[i].email << ' ';
+		output << staf[i].phone << ' ';
+		output << staf[i].payrate << ' ';
+		output << staf[i].weeklypayroll << ' ';
+	}
 
+	output.close();
 	return 0;
 }
 

@@ -10,40 +10,43 @@
 
 using namespace std;
 
-
-
-
 void adminConsole(int id, vector<staff> staf, vector <dayhr> clockinvec, vector <schechule> schechuVec)
 {
-	cout << "*******FUNCTION CONSOLE******* \n";
+	int choice = 1;
+	while (choice != 0)
+	{ 
+	cout << endl << "*******FUNCTION CONSOLE******* \n";
 	cout << "1. CLOCK IN \n";
 	cout << "2. CLOCK OUT \n";
 	cout << "3. VIEW SHECHULE \n";
-	cout << "4. VIEW ALL EMPLOYEE INFO \n";
+	cout << "4. VIEW YOUR EMPLOYEE INFO \n";
 	cout << "5. RESET WEEKLY PAYROLL \n";
-	cout << "Please enter your choice: ";
-	int choice;
+	cout << "Please enter your choice or enter 0 to end: ";
+	
 	cin >> choice;
 	cout << endl;
-
-	switch (choice)
-	{
-	case 1:
-		clockin(id, clockinvec);
-		break;
-	case 2:
-		clockout(id, clockinvec, staf);
-		break;
-	case 3:
-		viewshechule(id, schechuVec);
-		break;
-	case 4:
-		view_employee_info(id, staf);
-		break;
-	default:
-		resetWP(id, staf);
-		break;
+	
+		switch (choice)
+		{
+		case 1:
+			clockin(id, clockinvec);
+			break;
+		case 2:
+			clockout(id, clockinvec, staf);
+			break;
+		case 3:
+			viewshechule(id, schechuVec);
+			break;
+		case 4:
+			view_employee_info(id, staf);
+			break;
+		case 5:
+			resetWP(id, staf);
+			break;
+		}
 	}
+	cout <<endl << " work is done. Program is close now!" << endl;
+	
 };
 	void clockin(int ID, vector <dayhr> clockinvec)
 	{
@@ -139,5 +142,8 @@ void adminConsole(int id, vector<staff> staf, vector <dayhr> clockinvec, vector 
 		{
 			staf[i].weeklypayroll = 0;
 		}
+
+		
+
 		cout << " Weekly payroll for all staff have been reset !" << endl;
 	};

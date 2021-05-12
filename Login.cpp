@@ -17,37 +17,43 @@ int userlogin()
 	int u,user;
 	string pass, p;
 	int level_access;
-	cout << "Enter your username ID: ";
-	cin >> user;
-	cout << "Enter your password: ";
-	cin >> pass;
-
-	ifstream input("ownerregister.txt");
-
-	while (input >> u >> p >> level_access)
+	char choice = 'y';
+	while (choice != 'n')
 	{
-		
-		if (u == user && p == pass)
+		cout << "Enter your username ID: ";
+		cin >> user;
+		cout << "Enter your password: ";
+		cin >> pass;
+
+		ifstream input("ownerregister.txt");
+
+		while (input >> u >> p >> level_access)
 		{
-			//levelaccess = level_access;
-			//id = user;
-			exist = 1;
-		}
-	}
-	input.close();
-	if (exist == 1)
-	{
-		cout << "Welcome " << user << " to Staff Management System\n";
-		//id = user;
-		return user;
-		
-	}
-	else
-	{
-		cout << "Invalid username or password, please try again";
-		
-		
 
+			if (u == user && p == pass)
+			{
+				//levelaccess = level_access;
+				//id = user;
+				exist = 1;
+			}
+		}
+		input.close();
+		if (exist == 1)
+		{
+			cout << "Welcome " << user << " to Staff Management System\n";
+			//id = user;
+			return user;
+
+		}
+		else
+		{
+			cout << "Invalid username or password !!" <<endl;
+
+
+
+		}
+		cout << " Do you want to try a gain? y/n: ";
+		cin >> choice;
 	}
 }
 
