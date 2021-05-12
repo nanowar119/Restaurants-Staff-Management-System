@@ -8,9 +8,12 @@
 #include <ctime>
 #include <vector>
 #include <ctime>
+#include "console_func.h"
 
 using namespace std;
-vector <staff> stafvec;
+
+using std::vector;
+
 
 int main()
 {
@@ -39,8 +42,8 @@ int main()
 		input >> schechuVec[i].suntime;
 		
 	}   
-
-	/// //////////////////
+	input.close();
+	
 	
 	ifstream input1("staffinfo.txt");
 	vector <staff> staf;
@@ -62,28 +65,30 @@ int main()
 		input1 >> staf[i].payrate;
 		input1 >> staf[i].weeklypayroll;
 	}
-	
+	input1.close();
 	//////
 	ifstream inputclock("clockinTime.txt");
-	vector <dayhr> clockin;
+	vector <dayhr> clockinvec;
 	int size2;
 	inputclock >> size2;
 	cout << size2;
 	for (int i = 0; i < size2; i++) // create vector to store clock in time in second
 	{
-		clockin.push_back(dayhr());
+		clockinvec.push_back(dayhr());
 		
 	}
 
 	for (int i = 0; i < size2; i++) // load clockin info vector
 	{
-		inputclock >> clockin[i].id;
-		inputclock >> clockin[i].clockin;
+		inputclock >> clockinvec[i].id;
+		inputclock >> clockinvec[i].clockin;
 	}
-
+	inputclock.close();
 
 	
 	int choice;
+	int levelacc = 0;
+	int id = 0;
 	cout << "*******LOGIN******* \n";
 	cout << "1. LOGIN WITH USERNAME ID \n";
 	cout << "2. REGISTER \n";
@@ -94,7 +99,8 @@ int main()
 	switch (choice)
 	{
 	case 1:
-		userlogin();
+		id = userlogin();
+		cout << " id after case 1 is: " << id << endl;
 		break;
 	case 2:
 		userregister();
@@ -109,5 +115,23 @@ int main()
 		cout << "Invalid choice, please try again";
 		forgot();
 	}
+	cout << " ---------------------------------------------------------------------" << endl;
+
+	cout << "id is" << id << " level is : " << levelacc;
+	adminConsole(id, staf, clockinvec, schechuVec);
+	
+
+
+
+
+
+
+
+
+
+
+
+
 	return 0;
 }
+

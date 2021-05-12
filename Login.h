@@ -12,7 +12,7 @@ class login
 
 using namespace std;
 
-void userlogin();
+int userlogin();
 void userregister();
 void forgot();
 

@@ -12,7 +12,7 @@ using namespace std;
 
 struct staff
 {
-	int id;
+	int id = 0;
 	string fname, lname, email;
 	string phone;
 	float weeklypayroll;
@@ -21,12 +21,12 @@ struct staff
 
 struct schechule
 {
-	int id;
+	int id = 0;
 	string montime,tuestime,wedtime,thutime,fritime,sattime,suntime;
 };
 
 struct dayhr
 {
-	int id;
-	int clockin ; // time(&current_time) to find current time in second
+	int id = 0;
+	int clockin = 0 ; // time(&current_time) to find current time in second
 };

@@ -1,19 +1,24 @@
 #pragma once
+#include <vector>
+#include "Staff.h"
+using namespace std;
+
+
 class console_func
 {
 };
 
-void clockin()
+void clockin(int ID,vector <dayhr> clockinvec)
 ;
 
-void clockout();
+void clockout(int ID, vector <dayhr> clockinvec, vector <staff> staf);
 
-void viewshechule();
+void viewshechule(int ID,  vector <schechule> schechuVec);
 
-void view_employee_info();
+void view_employee_info(int ID, vector <staff> staf);
 
 
-void resetWP();
+void resetWP(int ID, vector <staff> staf);
 
-void adminConsole();
+void adminConsole(int id, vector<staff> staf, vector <dayhr> clockinvec, vector <schechule> schechuVec);
 

@@ -5,18 +5,17 @@
 #include <istream>
 #include <string.h>
 #include <stdlib.h>
-
+#include <vector>
 
 using namespace std;
 
-void userlogin();
-void userregister();
-void forgot();
 
-void userlogin()
+
+int userlogin()
 {
 	int exist = 0;
-	string user, pass, u, p;
+	int u,user;
+	string pass, p;
 	int level_access;
 	cout << "Enter your username ID: ";
 	cin >> user;
@@ -30,6 +29,8 @@ void userlogin()
 		
 		if (u == user && p == pass)
 		{
+			//levelaccess = level_access;
+			//id = user;
 			exist = 1;
 		}
 	}
@@ -37,14 +38,15 @@ void userlogin()
 	if (exist == 1)
 	{
 		cout << "Welcome " << user << " to Staff Management System\n";
-		cin.get();
-		cin.get();
+		//id = user;
+		return user;
+		
 	}
 	else
 	{
 		cout << "Invalid username or password, please try again";
-		cin.get();
-		cin.get();
+		
+		
 
 	}
 }
