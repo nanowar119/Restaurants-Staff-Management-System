@@ -67,6 +67,7 @@ void adminConsole(int id, vector<staff> staf, vector <dayhr> clockinvec, vector 
 				clock << clockinvec[i].clockin<< endl;
 			}
 			clock.close();	
+			cout << endl << " ClockIn successful " << endl;
 	};
 
 	void clockout(int ID, vector <dayhr> clockinvec, vector <staff> staf)

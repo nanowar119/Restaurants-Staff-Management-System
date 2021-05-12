@@ -100,7 +100,6 @@ int main()
 	{
 	case 1:
 		id = userlogin();
-		cout << " id after case 1 is: " << id << endl;
 		break;
 	case 2:
 		userregister();

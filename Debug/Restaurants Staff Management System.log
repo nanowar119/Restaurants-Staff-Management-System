@@ -1,3 +1,10 @@
-﻿  login.cpp
-C:\Users\nanow\source\repos\Restaurants Staff Management System\Restaurants Staff Management System\login.cpp(58): warning C4715: 'userlogin': not all control paths return a value
+﻿  console_func.cpp
+C:\Users\nanow\source\repos\Restaurants Staff Management System\Restaurants Staff Management System\console_func.cpp(59,48): warning C4244: '=': conversion from 'time_t' to 'int', possible loss of data
+C:\Users\nanow\source\repos\Restaurants Staff Management System\Restaurants Staff Management System\console_func.cpp(64,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\nanow\source\repos\Restaurants Staff Management System\Restaurants Staff Management System\console_func.cpp(76,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\nanow\source\repos\Restaurants Staff Management System\Restaurants Staff Management System\console_func.cpp(89,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\nanow\source\repos\Restaurants Staff Management System\Restaurants Staff Management System\console_func.cpp(98,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\nanow\source\repos\Restaurants Staff Management System\Restaurants Staff Management System\console_func.cpp(108,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\nanow\source\repos\Restaurants Staff Management System\Restaurants Staff Management System\console_func.cpp(127,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\nanow\source\repos\Restaurants Staff Management System\Restaurants Staff Management System\console_func.cpp(142,21): warning C4018: '<': signed/unsigned mismatch
   Restaurants Staff Management System.vcxproj -> C:\Users\nanow\source\repos\Restaurants Staff Management System\Debug\Restaurants Staff Management System.exe

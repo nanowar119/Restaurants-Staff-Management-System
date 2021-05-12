@@ -40,7 +40,8 @@ int userlogin()
 		input.close();
 		if (exist == 1)
 		{
-			cout << "Welcome " << user << " to Staff Management System\n";
+			
+			cout << endl << "Welcome Staff ID number: " << user << " to Staff Management System\n";
 			//id = user;
 			return user;
 
